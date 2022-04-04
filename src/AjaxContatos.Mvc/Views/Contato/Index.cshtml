@@ -1,0 +1,80 @@
+﻿@model IEnumerable<AjaxContatos.Service.ViewModels.ContatoViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-center">@Html.ActionLink("Adicionar Contato", "Create", null, new { @class = "btn btn-primary" })</h2>
+
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Email</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nome</td>
+                <td>@item.Telefone</td>
+                <td>@item.Email</td>
+                <th scope="col">
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }, new { @class = "btn btn-info" })
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                </th>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+
+<!--<p>
+    @Html.ActionLink("Adicionar Contato", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<p>-->
+@*@Html.ActionLink()*@
+<!--</p>
+<table class="table">
+    <tr>
+        <th>
+            Nome
+        </th>
+        <th>
+            Telefone
+        </th>
+        <th>
+            E-mail
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Nome
+            </td>
+            <td>
+                @item.Telefone
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                @Html.ActionLink("Detalhes", "Details", new { id = item.Id }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Excluir", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+</table>-->

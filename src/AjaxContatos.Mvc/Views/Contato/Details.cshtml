@@ -1,0 +1,48 @@
+﻿@model AjaxContatos.Service.ViewModels.ContatoViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+<h2>Details</h2>
+
+<div>
+        <h4>ContatoViewModel</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Telefone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Telefone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Cpf)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Cpf)
+            </dd>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-info"}) 
+        @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-success" })
+    </p>
